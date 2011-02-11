@@ -13,7 +13,6 @@ get "/" do
   haml :index
 end
 
-#  Main handler for data parsing.
 post "/*" do
   if params["page"]
     @arabic = params["page"]["arabic"]
