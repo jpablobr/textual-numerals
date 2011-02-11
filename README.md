@@ -9,11 +9,11 @@ Disclaimer: This is just some hacked stuff that I did in a few hours...
     $ bundle install
     $ rackup
 
-### To use with thin
+### To Use With Thin:
 
     $ thin start -p PORT -R config.ru
 
-### Api
+### API:
 
 It works properly with json and xml.
 
@@ -26,15 +26,15 @@ n the convert via a RestClient or Curl Client.
         $.post("/json",  { page: { arabic: "2" }, commit: "Convert 2 English" }, function(data) { console.log(data);}, "json");
     });
 
-### Testing
+### Testing:
 
 See `./arabic_number_translator_spec.rb`
 
-To run the test:
+To run the tests:
 
     $ ruby arabic_number_translator_spec.rb
 
-### TODO
+### TODO:
 
 Odd or even returns depending on user input.
 
@@ -59,7 +59,7 @@ Odd or even returns depending on user input.
         |-- index.haml
         `-- layout.haml
 
-### Note on Patches/Pull Requests
+### Note on Patches/Pull Requests:
 
 Fork the project.
 Make your feature addition or bug fix.
@@ -67,6 +67,6 @@ Add tests for it. This is important so I don’t break it in a future version un
 Commit, do not mess with rakefile, version, or history. (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
 Send me a pull request. Bonus points for topic branches.
 
-### Copyright
+### Copyright:
 
 Copyright 2011 Jose Pablo Barrantes. MIT Licence, so go for it.
