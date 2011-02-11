@@ -5,28 +5,20 @@
       %link{ :href => "/stylesheets/#{css}.css", :rel => "stylesheet", :type => "text/css", :media => "screen", :charset => "utf-8" }
     %meta{ :name => 'description', :content => 'Write western numerals using Arabic number characters'  }
     %meta{ :name => 'keywords', :content => 'western numerals Arabic number characters'  }
+    %link{:href => "http://fonts.googleapis.com/css?family=Dancing+Script", :rel => "stylesheet", :type => "text/css"}
   %body
     %h6
-      %a{:href => "#"} Textual numerals web service
     %h1 Western numerals using Arabic number characters
-    %p For example (in English and Spanish):
-    %p 7 → seven → siete
-    %p 42 → forty-two → cuarenta y dos
-    %p 2001 → two thousand and one → dos mil uno
-    %p 1999 → one thousand nine hundred and ninety-nine
-    %p onvert CSS Snippets to Syntactically Awesome StyleSheets code
     %hr
     .container_12
       .grid_12
         = yield
-      .clear
       .grid_12
         #box
         %br
-        %p
-          Source at
-          %a{:href => "#"} http://arabic-translator.com/code
-
+        %p For example (in English and Spanish):
+        %p 7 → seven → siete
+        %p 1999 → one thousand nine hundred and ninety-nine
         %p
           Textual numerals web service by
-          %a{ :href => "#"} http://jpablobr.com
+          %a{ :href => "http://jpablobr.com"} http://jpablobr.com

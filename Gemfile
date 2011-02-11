@@ -1,10 +1,14 @@
 source :gemcutter
 
 gem 'thin'
-gem 'sinatra', '1.0.0'
+gem 'sinatra'
 gem 'hpricot'
-gem 'haml', '3.0.11'
+gem 'haml'
 gem 'json'
 gem 'builder'
 gem 'erubis'
 gem 'ruby_parser'
+gem 'linguistics'
+gem 'google-translate'
+gem 'crack'
+gem 'rspec'

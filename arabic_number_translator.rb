@@ -1,8 +1,9 @@
+require 'rubygems'
+require 'bundler'
+Bundler.require
 require 'sinatra'
-require "haml"
-require "json"
+require 'google_translate'
 
-# Helpers for filtering data
 helpers do
   include Rack::Utils
   alias_method :h, :escape_html
@@ -12,14 +13,13 @@ get "/" do
   haml :index
 end
 
-#  Main handler for the posted data.
+#  Main handler for data parsing.
 post "/*" do
-  puts params["commit"]
   if params["page"]
     @arabic = params["page"]["arabic"]
 
     # Parses depending on requested format. It would be very simple to add more
-    # formats with something like a drop-down in the HTML form.
+    # formats with somethinputs Number.to_words(30)g like a drop-down in the HTML form.
     if params["commit"] == "Convert 2 English"
       @western = arabic_to_english(@arabic)
     else
@@ -37,13 +37,19 @@ post "/*" do
   end
 end
 
-# This should retur
+# This should return
 # the arabic number in western format.
-def arabic_to_english(arabic); end
+def arabic_to_english(arabic);
+  Linguistics::EN.numwords(arabic)
+end
 
-def arabic_to_spanish(arabic); end
+def arabic_to_spanish(arabic);
+  t = Google::Translator.new
+  en_results = arabic_to_english(arabic)
+  t.translate :en, :es, en_results
+end
 
-# XML builder for xml representation
+# XML builder for xml.
 def to_xml
   builder do |xml|
     xml.instruct!
