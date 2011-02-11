@@ -1,10 +1,16 @@
+# To use with thin
+# thin start -p PORT -R config.ru
+require 'sinatra'
 require 'rubygems'
 require 'bundler/setup'
-require 'sinatra'
 
-set :environment, :production
+# include our Application code
+require File.join(File.dirname(__FILE__), 'arabic_number_translator.rb')
+
+# disable sinatra's auto-application starting
 disable :run
 
-require 'arabic_number_translator.rb'
+# we're in dev mode
+set :environment, :development
 
 run Sinatra::Application

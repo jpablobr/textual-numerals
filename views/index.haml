@@ -1,0 +1,13 @@
+%form{:method => "POST", :action => "/", :id => "page"}
+  %label{:for => "page_arabic"}
+    Arabic Numbers (paste your arabic numbers and convert!)
+  %textarea{:id => "page_arabic", :name => "page[arabic]"}=h @arabic || ""
+  %br
+  %input.button{:type => "submit", :name => "commit", :value => "Convert 2 English"}
+  %input.button{:type => "submit", :name => "commit", :value => "Convert 2 Spanish"}
+  %input.button{:type => "reset", :name => "commit", :value => "Reset"}
+
+  %br
+  %label{:for => "page_western"}
+    Western Numbers
+    %textarea{:id => "page_western", :name => "page[western]"}= @western || ""

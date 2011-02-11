@@ -46,3 +46,58 @@ terms of space and time, code commenting, code structure and testing.
 
 Any open question should be answered freely by the candidate. We want you to show initiative,
 and defend your point of view, so provide us with an explanation that can convice us.
+
+## Implementation:
+
+### To use with thin
+$ thin start -p PORT -R config.ru
+
+### Api
+
+It works properly with json and xml.
+
+You can also run the convert via a RestClient or Curl Client.
+
+### Testing
+
+[RSpec](http://wiki.github.com/dchelimsky/rspec)
+
+[Sinatra testing](http://www.sinatrarb.com/testing.html)
+
+Sinatra now relies on Rack::Test and has deprecated the use of Sinatra::Test.
+
+`sudo gem install rack-test`
+
+See `./arabic_number_translator_spec.rb`
+
+### TODO
+
+Implement the following methods:
+
+`def arabic_to_english(arabic); end`
+
+`def arabic_to_spanish(arabic); end`
+
+Odd or even returns depending on user input.
+
+### Directory Structure:
+.
+|-- arabic_number_translator.rb
+|-- arabic_number_translator_spec.rb
+|-- config.ru
+|-- doc
+|-- Gemfile
+|-- Gemfile.lock
+|-- lib
+|-- public
+|   `-- stylesheets
+|       |-- 960.css
+|       |-- app.css
+|       |-- reset.css
+|       `-- text.css
+|-- readme.markdown
+|-- REVISION
+`-- views
+    |-- index.haml
+    `-- layout.haml
+
