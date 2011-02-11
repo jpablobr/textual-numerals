@@ -40,7 +40,7 @@ See `./arabic_number_translator_spec.rb`
 
 To run the test:
 
-    $ ruby ruby arabic_number_translator_spec.rb
+    $ ruby arabic_number_translator_spec.rb
 
 ### TODO
 
