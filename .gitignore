@@ -1,0 +1,7 @@
+webrat*
+.bundle
+log/*.log
+test/fixtures/*
+doc
+REVISION
+.lock
