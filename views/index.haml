@@ -1,10 +1,11 @@
-%form{:method => "POST", :action => "/", :id => "page"}
-  %label{:for => "page"}
-    Paste your arabic numbers and convert!
+%form{:method => "POST", :action => "/", :id => "page", :name => "arabic_converter"}
+  %label.page_title{:for => "page"}
+    Paste your numbers and convert!
+  .clear
   %textarea{:id => "page_arabic", :name => "page[arabic]"}=h @arabic || ""
   %label{:for => "page_western"}
   %textarea{:id => "page_western", :name => "page[western]"}= @western || ""
 
   %input.button{:type => "submit", :name => "commit", :value => "Convert 2 English"}
   %input.button{:type => "submit", :name => "commit", :value => "Convert 2 Spanish"}
-  %input.button{:type => "reset", :name => "commit", :value => "Reset"}
+  %input.button{:type => "reset", :onClick => 'document.arabic_converter.paga[arabic].value='';'}

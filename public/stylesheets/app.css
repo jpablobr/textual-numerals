@@ -5,3 +5,6 @@ label { display:block; }
 textarea { width:40%; height:200px; float:left;}
 input.button { margin:10px; text-aligin:center; }
 a, a:visited { color: gray;}
+.container_12 #box { padding:0px 0px 20px 10px; display:inline-block; }
+.clear{ clear:both; }
+.page_title{ padding:10px 0px 15px 0px; }
