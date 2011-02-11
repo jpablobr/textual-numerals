@@ -18,15 +18,16 @@ post "/*" do
   if params["page"]
     @arabic = params["page"]["arabic"]
 
-    # Parses depending on requested format. It would be very simple to add more
-    # formats with somethinputs Number.to_words(30)g like a drop-down in the HTML form.
+    # Parses depending on requested format.
+    # It would be very simple to add moreformats
+    # with something like a drop-down in the HTML form.
     if params["commit"] == "Convert 2 English"
       @western = arabic_to_english(@arabic)
     else
       @western = arabic_to_spanish(@arabic)
     end
 
-    # If json requested parse data to json.
+    # JSON or XML
     if params[:splat].include?("json")
       {:page => {:arabic => @arabic, :western => @western}}.to_json
     elsif params[:splat].include?("xml")
@@ -49,7 +50,6 @@ def arabic_to_spanish(arabic);
   t.translate :en, :es, en_results
 end
 
-# XML builder for xml.
 def to_xml
   builder do |xml|
     xml.instruct!
