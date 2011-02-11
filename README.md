@@ -36,7 +36,7 @@ To run the test:
 
 ### TODO
 
-Add or even returns depending on user input.
+Odd or even returns depending on user input.
 
 ### Directory Structure:
     .
