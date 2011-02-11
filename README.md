@@ -28,14 +28,6 @@ n the convert via a RestClient or Curl Client.
 
 ### Testing
 
-[RSpec](http://wiki.github.com/dchelimsky/rspec)
-
-[Sinatra testing](http://www.sinatrarb.com/testing.html)
-
-Sinatra now relies on Rack::Test and has deprecated the use of Sinatra::Test.
-
-    $ sudo gem install rack-test
-
 See `./arabic_number_translator_spec.rb`
 
 To run the test:
